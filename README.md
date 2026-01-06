@@ -1,144 +1,152 @@
-# Web Integrated Automated Disease Detection Using Artificial Intelligence
+# 🏥 Web Integrated Automated Disease Detection Using Artificial Intelligence
 
-## 📌Project Overview
+## 📌 Project Overview
 
-This project presents a **web-based automated disease detection system** that leverages **Artificial Intelligence and Deep Learning** to assist in early and accurate diagnosis of critical diseases. The system integrates multiple deep learning models into a unified web interface, enabling users to upload medical images and receive predictions in real time.
+This project delivers a **web-based, AI-powered medical diagnosis system** designed to assist in the early detection of critical diseases using medical imaging. By integrating multiple deep learning models into a single web application, the system enables fast, accurate, and accessible disease prediction through a simple user interface.
 
-The application focuses on **three major diseases**:
+The solution focuses on **three major diseases**:
 
-* Brain Tumor
-* Alzheimer’s Disease
-* Pneumonia
+* **Brain Tumor**
+* **Alzheimer’s Disease**
+* **Pneumonia**
 
-The system is designed to be user-friendly, scalable, and suitable for clinical decision support and academic research.
+Each disease is handled using a model architecture chosen for its proven effectiveness in medical image analysis.
 
+---
 
 ## 🎯 Objectives
 
-* To automate disease detection using deep learning models
-* To provide fast and accurate predictions from medical images
-* To integrate multiple disease detection models into a single web platform
-* To reduce manual diagnosis effort and support early intervention
+* Automate disease detection using deep learning
+* Improve diagnostic accuracy and speed
+* Provide a unified web platform for multiple diseases
+* Reduce manual effort and support clinical decision-making
 
+---
 
-## 🧠 Diseases and Models Used
+## 🧠 Disease Modules & Models
 
-1. Brain Tumor Detection
+### 🧬 Brain Tumor Detection
 
-Model: ResNet50
-Input: MRI brain images
-Purpose: Classify and detect presence of brain tumors using transfer learning
+* **Model:** ResNet50 (Transfer Learning)
+* **Input:** MRI brain images
+* **Description:**
+  A deep residual network is fine-tuned to extract high-level spatial features from MRI scans, enabling robust tumor detection with reduced vanishing-gradient issues.
 
-2. Alzheimer’s Disease Detection
+---
 
-Model: ResNet50
-Input: MRI brain scans
-Purpose: Identify Alzheimer’s stages by learning disease-specific patterns
+### 🧠 Alzheimer’s Disease Detection
 
-3. Pneumonia Detection
+* **Model:** ResNet50 (Transfer Learning)
+* **Input:** MRI brain scans
+* **Description:**
+  The same residual learning architecture is adapted to detect Alzheimer’s-related structural changes in the brain, providing reliable classification across disease stages.
 
-Model: VGG16
-Input: Chest X-ray images
-Purpose: Detect pneumonia by analyzing lung abnormalities
+---
 
+### 🫁 Pneumonia Detection
 
+* **Model:** Custom Convolutional Neural Network (CNN)
+* **Input:** Chest X-ray images
+* **Description:**
+  A lightweight CNN is designed and trained from scratch to capture lung texture patterns, enabling effective pneumonia detection with optimized computational cost.
+
+---
 
 ## 🖥️ System Architecture
 
 1. User uploads medical images via web interface
-2. Image preprocessing and normalization
-3. Deep learning model inference
-4. Prediction results displayed on the web page
+2. Image preprocessing (resizing, normalization)
+3. Disease-specific deep learning model inference
+4. Prediction result displayed instantly
 
-The backend handles model loading and inference, while the frontend ensures a simple and intuitive user experience.
+The modular design allows each disease model to operate independently while sharing a common web interface.
 
-
+---
 
 ## 🌐 Web Integration
 
-* **Framework:** Flask / Streamlit (depending on version)
-* Enables:
+* **Framework:** Flask / Streamlit
+* Features:
 
   * Image upload
-  * Model selection
-  * Real-time prediction
-  * Result visualization
+  * Disease selection
+  * Real-time predictions
+  * Clean and interactive UI
 
+This integration ensures ease of use for both technical and non-technical users.
+
+---
 
 ## 🛠️ Technologies Used
 
 * **Programming Language:** Python
 * **Deep Learning:** TensorFlow, Keras
-* **Models:** ResNet50, VGG16, Custom CNN
+* **Models:** ResNet50, Custom CNN
 * **Web Framework:** Flask / Streamlit
 * **Libraries:** NumPy, OpenCV, Scikit-learn
-* **Development Tools:** Jupyter Notebook, VS Code
+* **Tools:** Jupyter Notebook, VS Code
 
 ---
 
 ## ▶️ How to Run the Project
 
-### 1. Install Python
+### 1️⃣ Install Python
 
-Install **Python 3.10 or above** and ensure *Add Python to PATH* is checked.
+Install **Python 3.10 or higher**
+✔️ Ensure **Add Python to PATH** is enabled
 
-### 2. Install Required Libraries
+### 2️⃣ Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-(or manually install TensorFlow, Streamlit/Flask, NumPy, OpenCV)
-
-### 3. Navigate to Project Directory
+### 3️⃣ Navigate to Project Folder
 
 ```bash
 cd HealthCure_Full
 ```
 
-### 4. Run the Application
+### 4️⃣ Run the Application
 
-For Streamlit:
+**Streamlit version**
 
 ```bash
 python -m streamlit run streamlitversion.py
 ```
 
-For Flask:
+**Flask version**
 
 ```bash
 python app.py
 ```
 
-### 5. Open in Browser
+### 5️⃣ Open in Browser
 
-```text
-http://localhost:8501   (Streamlit)
-http://127.0.0.1:5000   (Flask)
-```
+* Streamlit → `http://localhost:8501`
+* Flask → `http://127.0.0.1:5000`
 
 ---
 
 ## 📊 Results
 
-* High accuracy in medical image classification
-* Reduced diagnosis time
-* Single platform for multiple disease detection
+* High classification accuracy across all three diseases
+* Fast inference time
+* Unified and scalable disease detection platform
 
 ---
 
-## 🔮 Future Enhancements
+## 🔮 Future Scope
 
-* Add more diseases and multi-class classification
-* Integrate cloud deployment
-* Improve UI/UX with dashboards
-* Add report generation and patient history tracking
+* Multi-class severity classification
+* Cloud deployment (AWS / GCP)
+* Integration with electronic health records (EHR)
+* Explainable AI (Grad-CAM visualizations)
 
 ---
 
 ## 📚 Conclusion
 
-This project demonstrates the effective use of deep learning in healthcare by integrating multiple disease detection models into a single, web-based system. It highlights how AI can support medical professionals by enabling fast, reliable, and accessible diagnostic tools.
+This project demonstrates the practical application of **deep learning in healthcare** by integrating **ResNet50-based transfer learning and custom CNN architectures** into a single web-based diagnostic system. It showcases how AI can enhance medical decision-making through speed, accuracy, and accessibility.
 
-
-Just say the word.
+---
